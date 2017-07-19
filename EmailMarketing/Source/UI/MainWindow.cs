@@ -1,4 +1,4 @@
-﻿using EmailMarketing.Controllers;
+﻿using Controllers;
 using System;
 using System.Configuration;
 

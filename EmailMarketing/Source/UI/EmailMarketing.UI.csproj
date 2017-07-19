@@ -55,13 +55,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Controllers\EmailMarketing.Controllers.csproj">
+      <Project>{0D3EA400-E10D-4383-A4E8-57F66B03A1C1}</Project>
+      <Name>EmailMarketing.Controllers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Data\EmailMarketing.Data.csproj">
       <Project>{b84cd9b3-281c-451e-bb27-d3dbe64d8402}</Project>
       <Name>EmailMarketing.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EmailMarketing.Controllers\EmailMarketing.Controllers.csproj">
-      <Project>{0D3EA400-E10D-4383-A4E8-57F66B03A1C1}</Project>
-      <Name>EmailMarketing.Controllers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\EmailMarketing.Models.csproj">
       <Project>{bdff6aa0-a4f3-4d72-a5fa-8d28f9a66fd4}</Project>

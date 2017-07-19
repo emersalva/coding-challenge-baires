@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inputs", "Inputs", "{F316B3
 		..\Data\Inputs\people.in = ..\Data\Inputs\people.in
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailMarketing.Controllers", "EmailMarketing.Controllers\EmailMarketing.Controllers.csproj", "{0D3EA400-E10D-4383-A4E8-57F66B03A1C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailMarketing.Controllers", "Controllers\EmailMarketing.Controllers.csproj", "{0D3EA400-E10D-4383-A4E8-57F66B03A1C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
