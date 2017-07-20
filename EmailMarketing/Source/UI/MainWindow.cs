@@ -1,6 +1,8 @@
 ﻿using Controllers;
+using EmailMarketing.Controllers.Interfaces;
 using System;
 using System.Configuration;
+using System.IO;
 
 namespace EmailMarketing.UI
 {
@@ -14,29 +16,29 @@ namespace EmailMarketing.UI
         /// <summary>
         /// File to be processed
         /// </summary>
-        private static string InputFile
+        private static string InputFileDisplay
         {
             get
             {
-                return ConfigurationManager.AppSettings["inputFile"];
+                return Path.GetFileName(ConfigurationManager.AppSettings["inputFile"]);
             }
         }
 
         /// <summary>
         /// File to be processed
         /// </summary>
-        private static string OutputFile
+        private static string OutputFileDisplay
         {
             get
             {
-                return ConfigurationManager.AppSettings["outputFile"];
+                return Path.GetFileName(ConfigurationManager.AppSettings["outputFile"]);
             }
         }
 
         /// <summary>
         /// Bussiness logic controller
         /// </summary>
-        private MainController _controller;
+        private IController _controller;
 
         #endregion
 
@@ -60,19 +62,21 @@ namespace EmailMarketing.UI
             Console.WriteLine("************************ EMAIL MARKETING PROGRAM ************************");
             Console.WriteLine("*************************************************************************");
             Console.Write(Environment.NewLine);
-            Console.WriteLine("INPUT FILE TO BE PROCESSED: {0}", InputFile);
+            Console.WriteLine("INPUT FILE TO BE PROCESSED: {0}", InputFileDisplay);
             Console.Write(Environment.NewLine);
             Console.WriteLine("EXECUTING...");
             Console.Write(Environment.NewLine);
             try
             {
-                _controller.ExecuteProcess(InputFile, OutputFile);
-                Console.WriteLine("YOU CAN FIND THE RESULT FILE AT: {0}", OutputFile);
+                _controller.ExecuteProcess();
+                Console.WriteLine("YOU CAN FIND THE RESULT FILE AT: {0}", OutputFileDisplay);
             }
             catch(Exception e)
             {
                 Console.WriteLine("AN ERROR OCCURRED:");
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Details: {0}", e.Message);
+                if(e.InnerException != null)
+                    Console.WriteLine("Inner exception: {0}", e.InnerException.Message);
             }
             Console.Write(Environment.NewLine);
             Console.WriteLine("ENTER ANY KEY TO EXIT");

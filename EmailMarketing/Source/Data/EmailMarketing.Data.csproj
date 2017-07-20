@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,7 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IDataAccess.cs" />
+    <Compile Include="LocalDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\EmailMarketing.Models.csproj">
+      <Project>{BDFF6AA0-A4F3-4D72-A5FA-8D28F9A66FD4}</Project>
+      <Name>EmailMarketing.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\EmailMarketing.Utils.csproj">
+      <Project>{6A3E0204-FD30-4D5D-867B-641B10691E3D}</Project>
+      <Name>EmailMarketing.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

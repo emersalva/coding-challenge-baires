@@ -11,10 +11,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailMarketing.UI", "UI\Ema
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inputs", "Inputs", "{F316B354-0F8C-4074-B745-A73EBEF50EA0}"
 	ProjectSection(SolutionItems) = preProject
+		..\Data\Inputs\countryMatches.mtc = ..\Data\Inputs\countryMatches.mtc
+		..\Data\Inputs\industryMatches.mtc = ..\Data\Inputs\industryMatches.mtc
 		..\Data\Inputs\people.in = ..\Data\Inputs\people.in
+		..\Data\Inputs\roleMatches.mtc = ..\Data\Inputs\roleMatches.mtc
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailMarketing.Controllers", "Controllers\EmailMarketing.Controllers.csproj", "{0D3EA400-E10D-4383-A4E8-57F66B03A1C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailMarketing.Utils", "Utils\EmailMarketing.Utils.csproj", "{6A3E0204-FD30-4D5D-867B-641B10691E3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Output", "Output", "{DB4D2757-1813-4BFC-8201-77DBE05AA921}"
+	ProjectSection(SolutionItems) = preProject
+		..\Data\Output\people.out = ..\Data\Output\people.out
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +48,10 @@ Global
 		{0D3EA400-E10D-4383-A4E8-57F66B03A1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D3EA400-E10D-4383-A4E8-57F66B03A1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D3EA400-E10D-4383-A4E8-57F66B03A1C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A3E0204-FD30-4D5D-867B-641B10691E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3E0204-FD30-4D5D-867B-641B10691E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A3E0204-FD30-4D5D-867B-641B10691E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A3E0204-FD30-4D5D-867B-641B10691E3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
