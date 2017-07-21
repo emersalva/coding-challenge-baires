@@ -155,7 +155,7 @@ namespace Controllers
             try
             {
                 var finalResult = GetFinalRecords(resultsRecords);
-                _dataAccess.WriteResults((finalResult.Select(r => new string[] { r.PersonId.ToString(), r.Role, r.Country})).ToList());
+                _dataAccess.WriteResults((finalResult.Select(r => new string[] { r.PersonId.ToString() })).ToList());
             }
             catch (Exception e)
             {
